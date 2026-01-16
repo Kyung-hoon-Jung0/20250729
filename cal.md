@@ -193,15 +193,15 @@ end
 
 subgraph Exp22[" "]
   direction LR
-  I22["<div style='width:420px; text-align:center; font-size:16px'><b>Node params</b><br/>- drive_frequency<br/>- flux_duration</div>"]
-  E22["<div style='width:320px; text-align:center; font-size:20px; font-weight:700'>Cryoscope (IIR)</div>"]
+  I22["<div style='width:420px; text-align:center; font-size:16px'><b>Node params</b><br/>- drive_frequency<br/>- qubit_flux_duration</div>"]
+  E22["<div style='width:320px; text-align:center; font-size:20px; font-weight:700'>Cryoscope<br/>(IIR for Qubit Flux)</div>"]
   O22["<div style='width:420px; text-align:center; font-size:16px'><b>Output</b><br/>- digital_filter_IIR</div>"]
   I22 --> E22 --> O22
 end
 
 subgraph Exp23[" "]
   direction LR
-  I23["<div style='width:420px; text-align:center; font-size:16px'><b>Node params</b><br/>-frame_frequency<br/>- flux_duration</div>"]
+  I23["<div style='width:420px; text-align:center; font-size:16px'><b>Node params</b><br/>-frame_rotation<br/>- qubit_flux_duration</div>"]
   E23["<div style='width:320px; text-align:center; font-size:20px; font-weight:700'>Cryoscope<br/>(FIR for Qubit Flux)</div>"]
   O23["<div style='width:420px; text-align:center; font-size:16px'><b>Output</b><br/>- digital_filter_FIR</div>"]
   I23 --> E23 --> O23
@@ -209,7 +209,7 @@ end
 
 subgraph Exp24[" "]
   direction LR
-  I24["<div style='width:420px; text-align:center; font-size:16px'><b>Node params</b><br/>-frame_frequency<br/>- flux_duration</div>"]
+  I24["<div style='width:420px; text-align:center; font-size:16px'><b>Node params</b><br/>-qubit_frequency<br/>- coupler_flux_duration</div>"]
   E24["<div style='width:320px; text-align:center; font-size:20px; font-weight:700'>Cryoscope<br/>(IIR for Coupler Flux)</div>"]
   O24["<div style='width:420px; text-align:center; font-size:16px'><b>Output</b><br/>- digital_filter_IIR</div>"]
   I24 --> E24 --> O24
@@ -217,7 +217,7 @@ end
 
 subgraph Exp25[" "]
   direction LR
-  I25["<div style='width:420px; text-align:center; font-size:16px'><b>Node params</b><br/>-frame_frequency<br/>- flux_duration</div>"]
+  I25["<div style='width:420px; text-align:center; font-size:16px'><b>Node params</b><br/>-frame_rotation<br/>- coupler_flux_duration</div>"]
   E25["<div style='width:320px; text-align:center; font-size:20px; font-weight:700'>Cryoscope<br/>(FIR for Coupler Flux)</div>"]
   O25["<div style='width:420px; text-align:center; font-size:16px'><b>Output</b><br/>- digital_filter_FIR</div>"]
   I25 --> E25 --> O25
